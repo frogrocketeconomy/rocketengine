@@ -1,4 +1,4 @@
-Problem: we don't have a good way to focus the action of multiple humans while remaining sovereign
+## Problem: we don't have a good way to focus the action of multiple humans while remaining sovereign
 
 When people organise around shared goals, they tend to rely on the State to anchor their organisational structures and serve as the mediator of last resort between all stakeholders.
 
