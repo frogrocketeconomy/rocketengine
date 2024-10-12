@@ -82,29 +82,29 @@ The core of the solution is a hill-climbing algorithm which optimises for increa
 
 Software can be used to make things more efficient and to provide continuity of the current state of frogrocket, but the algorithm itself is executed by self-interested sovereign human action and not machine.
 
-Human action within frogrocket must be executed for purely self-interested reasons in order for it to be optimally efficient, accurate, scalable, and to minimise any social attack surface. When people solve problems for their own reasons, the solutions are more accurate than when they are doing it because someone is coercing them with money. A case in point: organic contributions to wikipedia vs. paid contributions.
+Human action within frogrocket must be executed for purely self-interested reasons in order for it to be optimally efficient, accurate, scalable, and to minimise any social attack surface. When people solve problems for their own reasons, the solutions are more accurate than when they are doing it because someone is paying them. A case in point: organic contributions to wikipedia vs. paid contributions.
 
 The life-force (or fuel) of an organisational structure is human action that yields **surplus** - that means production of surplus is in the critical path to more Participants, and so our algorithm must optimise for this.
 
 Amdahl's law can be restated as "the more you need consensus about what to build, the less efficient you will be at building it". For frogrocket to be the most efficient problem solver and builder, it must require the least amount of consensus on what to build and how to build it.
 
-Projects like ZeroMQ have proven that it's possible for valuable products/services (i.e. powerful and effective solutions) to evolve from simple rules with **no upfront planning** or consensus. This is core to our approach to innovation and surplus without requiring any consensus on what to build or how to build it - no upfront planning and no leadership.
+Evolution within the biosphere has proven that it's possible for powerful and effective solutions to evolve from simple rules with **no upfront planning** or consensus. This is core to the frogrocket approach to innovation and surplus without requiring any consensus on what to build or how to build it - no upfront planning and no leadership.
 
-The set of boundary conditions for human action within frogrocket is defined by the frogrocket Unprotocol. It's rather long, so here's a summary:
+### The set of boundary conditions for human action within frogrocket is defined by the frogrocket Unprotocol. It's rather long, so here's a summary:
 
 0. Anyone who's not already a **Participant** MAY become a Participant by being validated by an existing Participant. This results in a **tree of Participants** called the Identity Tree.
 
 1. Change follows the **Serbian method** - a continuous pattern of accurately identifying **Problems**, and applying the **simplest possible solution** to each Problem.
-    * This project is currently applicable only to a *very* tiny subset of humanity who are able to understand the concept and do something useful with it, but this subset should get *less tiny* with each problem solved.
+    * This project is only **applicable** to individuals who are able to understand the concept (a lot of reading) and do something useful with it (solve technical problems), but each problem solved should make the project **applicable** to a larger pool of individuals by making it easier to understand and contribute in some way.
     * As these problems and minimal solutions pile on top of each other, novel and valuable products/services will evolve (read the protocol to get a more complete picture of how this works).
     * There's nothing that inherently limits frogrocket to producing software based solutions, it could also produce hardware, houses, food, etc.
 
 2. Any Participant MAY log a **Problem** (an observed matter or situation regarded as unsatisfactory).
     * There are no bug reports or feature requests, these are just problems (or they aren't).
     * There are no priority levels for problems, there are just problems that are worth solving (or not).
-    * Problems should be reasoned about and broken down into smaller problems until they are objective or replicable, and actionable.
-    * Problems should be broken down until they are small enough that they can be solved very quickly - anything longer than 6 hours of working time is probably too big.
-    * Problems MUST be relevant to frogrocket itself. frogrocket is not a freelancing market or a problem-solver for hire.
+    * Problems should be reasoned about until they become a true refection of objective reality.
+    * Problems should be broken down until into sub-problems that are small enough to be solved very quickly - anything longer than 6 hours of working time is probably too big. 
+    * Problems MUST be relevant to the rocket itself. Rockets are not a freelancing market or a problem-solver for hire.
     * Problems MUST be nested under another Problem, creating a Problem Tree.
 
 3. Any Participant MAY **Claim** (and solve, typically with a **Patch**) any unclaimed Problem. Any **Maintainer** can (and should) **Merge** any Patch that does **not** violate the Unprotocol.
@@ -113,25 +113,24 @@ The set of boundary conditions for human action within frogrocket is defined by 
 4. A Participant who solves a Problem MAY indicate the value of their work by creating a **merit request**
     * A merit request MUST be denominated in Satoshi
     * A merit request is **not** an entitlement or guarantee to be paid
-    * An merit request is how a Participant SHOULD communicate the sacrifice they have made in solving the problem
-    * An merit request allows Participants to peer review the value being claimed by comparing individual solutions and their associated merit requests
+    * A merit request is how a Participant SHOULD communicate the value of the work in comparison to that of others
 
 5. Participants with **Votepower** MAY vote to **Ratify** (approve) or **Blackball** (reject) a merit request.
     * The merit request SHOULD be rejected unless it's along the route (or **critical path**) to more Participants.
     * Votepower is a measure of a Participant's **skin in the game**.
-    * `Votepower = Shares * Leadtime`
+    * `Votepower = Merits * Leadtime`
         * Every Participant's `Leadtime` starts at `0`.
-        * A Participant's Shares **cannot** be spent/transferred if their `Leadtime > 0`.
+        * A Participant's Merits **cannot** be spent/transferred if their `Leadtime > 0`.
         * A Participant MAY increase or decrease their Leadtime by `1` every 2,016 blocks (but can't become negative)
-        * If more than 50% of frogrocket's Votepower approves a merit request, and less than 5% reject it, its Approved.
-    * If Participants with Votepower reject merit requests that comply with the Unprotocol and are reasonable amounts, others will see this and stop working, and frogrocket will die or be forked.
-    * If Participants with Votepower approve merit requests that should not be approved, they are diluting their own Shares for no good reason.
+        * If more than 50% of frogrocket's Votepower approves a merit request, and less than 5% reject it, it's Approved.
+    * If Participants with Votepower reject merit requests that comply with the Unprotocol and are reasonable amounts, others will see this and stop working, and the rocket will die or be forked.
+    * If Participants with Votepower approve merit requests that should not be approved, they are diluting their own equity for no good reason.
 
-6. If a merit request is **Approved**, new **Shares** are created for the Participant who logged the merit request (1:1 per Satoshi claimed in the merit request).
-    * Shares MUST NOT be created **any other way** (that would mean the experiment has **failed**).
-    * frogrocket has been instantiated with a **single** share as this is technically the only way to bootstrap the process.
+6. If a merit request is **Approved**, new **Merits** are created for the Participant who logged the merit request (at the current market rate).
+    * Shares MUST NOT be created **any other way**.
+    * a new Rocket is always instantiated with a **single** Merit as this is technically the only way to bootstrap the process.
 
-7. Participants own **all** revenue produced by anything frogrocket builds. Whenever anyone pays for a product/service created (or **discovered**) by frogrocket, the Sats are streamed **directly** to Participants in proportion to the number of Shares they have and how long they've had them.
+7. Participants own **all** revenue produced by anything the rocket builds. Whenever anyone pays for a product/service created (or **discovered**) by a rocket, the coins are streamed **directly** to Participants in proportion to the number of Merits they own.
     * Revenue distribution MUST be fair for everyone. Potential Participants who take more risk by making sacrifices before it's clear if the experiment will work or not need to agree that it's fair. Potential Participants who want to do work after the concept is well established and revenue is being generated must also agree that revenue distribution is fair.
     * When there's a pot of money available, Mallory finds a way to corrupt whatever is guarding it.
-    * frogrocket MUST NOT retain any capital or raise any funds (and doing so is an anti-pattern that fundamentally precludes decentralisation).
+    * a rocket MUST NOT retain any capital or raise any funds (and doing so is an anti-pattern that fundamentally precludes decentralisation).
