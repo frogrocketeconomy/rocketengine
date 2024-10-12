@@ -1,0 +1,560 @@
+//todo implementations SHOULD rebuild with every merge such that state machine updates it's own rules and reaches consensus
+//todo OP_RETURN is what persists and keeps us united through changes to the implementation.
+//todo >50% of votepower can appoint a new Maintainer who can start their own Maintainer tree.
+//todo >70% of votepower can remove any Maintainer
+  ---------------------------
+  |  FROGROCKET UNPROTOCOL  |
+  ---------------------------
+
+
+ [] <Goal> FROGROCKET is an unstoppable civilisation built around Bitcoin
+
+   [] <Goal> The FROGROCKET Unprotocol is clearly defined and simple to understand.
+
+    [] <Definition> The FROGROCKET UNPROTOCOL ("NRP") is a Protocol encapsulating the boundary conditions for FROGROCKET Action.
+           <<If it isn't in the NRP, Participants MAY ignore it. The NRP provides restrictions on action (automated or human). Action is intended to be restricted by the NRP such that the territory of FROGROCKET is analogous to the useful space in a bucket (created by the restrictions of its base and sides), the useful light of a spotlight (focussed by the boundary conditions of its parabolic mirror), or the useful computations of a Bitcoin miner (left as an exercise for the reader) >>
+
+    [] <Definition> FROGROCKET refers to anything that exists due to the NRP.
+       <<e.g. the community surrounding the NRP, FROGROCKET Products, etc>>
+
+    [] <Definition> FROGROCKET ACTION is action by a Participant or a FROGROCKET Product, executed in relation to the NRP, and not in violation of the NRP.
+
+    [] <Definition> A FROGROCKET PRODUCT is anything created through FROGROCKET Action.
+       <<e.g. an implementation, a Protocol, a service. The NRP is a FROGROCKET Product, as is the Engine and Spaceman.>>
+
+    [] <Rule> The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” when used in ALL CAPS are to be interpreted as described in RFC 2119.
+
+    [] <Definition> A DEFINITION is a FROGROCKET Object representing a best effort at succinctly precluding unintended interpretations.
+
+      [] <Rule> The text of a Definition MUST appear in English.
+           <<FAQ: What about translations? Translations can be added to any FROGROCKET Object by tagging to the object in a kind 1 event and including a language tag>>
+
+      [] <Rule> The text of a Definition MUST NOT exceed 560 characters.
+
+      [] <Rule> A Definition MUST be a self-contained lexical unit; semantically and syntactically independent.
+
+    [] <Definition> A FROGROCKET OBJECT is a discrete object encapsulating persistent state.
+       <<e.g. an Account, a Problem, a Samizdat, a Patch, a Definition>>
+
+      [] <Goal> The state of FROGROCKET Object(s) is dependent on the NRP and not dependent on implementation(s).
+      <<The implementation, how state is stored, how state is validated, the architecture of the system(s) that retain state, etc can all change. The key is that there's the NRP, and there's state. State is produced and mutated by Participants executing on the NRP.>>
+
+      [] <Goal> The state of FROGROCKET Object(s) can be confirmed by referring to Bitcoin.
+      <<We must be able to completely change the architecture of the system(s) that allow Participants to reach consensus on state because we rely on Bitcoin to retain the last known state.>>
+
+    [] <Definition> A TERM is a word that has a Definition within the FROGROCKET Unprotocol.
+
+      [] <Rule> A Term MUST have exactly one (1) Definition.
+
+      [] <Rule> A Term MUST appear as ALL CAPS in its Definition, indicating its status as a Term. When used elsewhere and Capitalised, usage is intended as a Term and is to be interpreted as described in its Definition.
+
+      [] <Rule> Additional clarification and/or limitation MAY be provided by using the Term further to its Definition, within other Definition(s), Goal(s), Invariant(s), and Rule(s). Interpretation of the Term MUST NOT exclude any such clarification or limitation if included within the NRP.
+
+      <<If Definition(s) are the Term's body, Ambiguity is its life-force. We leave Terms minimally defined and watch them evolve as further limitations channel and focus their life-force.>>
+
+    [] <Definition> A RULE is a Definition of a limitation intended to satisfy a Goal or solve a Problem by providing focus.
+
+    [] <Definition> An INVARIANT is a Rule that can be relied upon by Participants as the foundation of programmatic and human consensus.
+
+      [] <Goal> The modification, addition, or removal of Invariants is impossible without near unanimous agreement.
+      <<Nearly everyone has to agree on a change, and they have to do it without being forced or pressured into it.>>
+
+      [] <Rule> An Invariant MUST be defined such that compliance can be verified programmatically.
+
+    [] <Definition> A GOAL is a Definition of a desired outcome.
+
+      [] <Rule> A Goal MUST be defined as either a specific outcome, OR an optimisation target.
+
+      [] <Rule> A Goal SHOULD be a solution to a Problem.
+
+      [] <Goal> Goals that encapsulate a specific outcome are defined such that a person of median IQ can reasonably judge whether the defined outcome has been attained or not.
+
+      [] <Rule> A Goal SHOULD NOT encapsulate an optimisation target unless it is impossible to define a specific outcome due to unknown maxima.
+
+    [] <Definition> A PROTOCOL is a FROGROCKET Object that MAY be composed of any combination of Definitions, Goals, Rules, Invariants, and Protocols.
+
+    [] <Definition> A NRIP is a Protocol downstream from the NRP intended to describe the implementation of a particular FROGROCKET Product.
+
+      [] <Goal> A NRIP inherits meaning and restrictions from the NRP.
+
+      [] <Goal> The NRP does not inherit any meaning or restriction from any NRIP.
+
+      [] <Goal> A NRIP is a description of an existing implementation and not a blueprint for producing an implementation.
+
+      [] <Goal> A NRIP can be updated efficiently by a Maintainer without requiring consensus from others.
+
+
+
+
+
+    [] <Goal> To maximise the degree to which hard power over FROGROCKET Products is distributed across the widest possible diversity of consciousness.
+
+      [] <Goal> To optimise for the expansion of the community surrounding the NRP, emerging the largest possible gathering of Participants.
+
+      [] <Goal> To minimise friction faced by new Participants.
+
+      [] <Goal> To provide a scaled participation model so that new Participants can advance along their individual zone of proximal development.
+
+      [] <Goal> To reduce the internal complexity of collective pursuits, making it easier to participate, and reducing the scope for error.
+
+      [] <Goal> FROGROCKET Products are owned by the Contributors who built them.
+
+        [] <Rule> FROGROCKET Products MUST NOT contain any code that is not licensed under the GPL or MPL v.2
+
+      [] <Goal> Content within FROGROCKET Products is owned by the Participant(s) who created it.
+
+        [] <Rule> User generated content within FROGROCKET Products MUST NOT include or consist of any data that is not licensed under CC BY-SA 4.0
+
+      [] <Goal> Anything produced by FROGROCKET is fully remixable.
+
+        [] <Rule> FROGROCKET Products and FROGROCKET Objects MUST NOT include or consist of any data that is not Licensed to enforce remixability and preclude hostile capture by entities that do not allow remixing of their derivative works.
+
+
+    [] <Goal> There is a basis for hard power within the FROGROCKET that is proportional to Participants' skin in the game.
+
+      [] <Definition> A Shareholder's VOTEPOWER is calculated by multiplying Shares by Lead Time.
+
+      [] <Definition> A SHAREHOLDER is a Participant who has a Share balance greater than 0.
+
+      [] <Definition> LEAD TIME is the latency, measured in Lead Time Units, for Shares to be transferred ("spent").
+
+      [] <Definition> A LEAD TIME UNIT ("LTU") is 2,016 Blocks.
+
+      [] <Rule> A Participant MAY divide their shares into a set that is locked by Lead Time, and a set that is not.
+
+      [] <Invariant> A Participant's Lead Time MUST NOT be reduced or increased if the last increase or reduction was less than 2,016 Blocks prior.
+
+      [] <Invariant> A Participant's Lead Time MUST NOT be reduced or increased by greater one (1) LTU concurrently.
+
+      [] <Invariant> Shares that are locked by a Lead Time of greater than zero (0) MUST NOT be transferred.
+
+
+    [] <Goal> There is an adequate mechanism for Participants to express their power within FROGROCKET.
+
+      [] <Definition> A PROPOSAL is any FROGROCKET Object that MAY be Approved or Rejected by a set of Participants.
+
+      [] <Definition> RATIFICATION is the act of a Participant voting to approve a Proposal.
+
+      [] <Definition> The RATIFICATION RATE is the minimum percentage of the current Votepower required for a Proposal to be Approved.
+
+      [] <Definition> BLACKBALL is the act of a Participant voting against a Proposal.
+
+      [] <Definition> The BLACKBALL RATE is the percentage of Votepower required to Invalidate a Proposal.
+
+      [] <Definition> The ACTIVE PERIOD is the minimum number of Blocks before a Proposal MAY be Approved.
+      <<for to allow time for Participants to Blackball the Proposal.>>
+
+      [] <Definition> APPROVED means that a Proposal has exceeded the Ratification Rate, has not exceeded the Blackball Rate, and the current Block height minus the Height of the Proposal exceeds the Active Period.
+
+      [] <Definition> INVALIDATED means a Proposal has met the Blackball Rate and is no longer a valid Proposal.
+
+      [] <Rule> An Invalidated Proposal SHOULD NOT be reintroduced.
+
+    [] <Goal> There is a safe and efficient mechanism to modify the NRP such that it may adapt to the current Grand Manifestation of Existence.
+
+      [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals targeting an Invariant MUST be 90%, 1% and 25,920 Blocks, respectively.
+
+      [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals targeting a Goal MUST be 80%, 3% and 12,960 Blocks, respectively.
+
+      [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals targeting a Rule MUST be 75%, 5% and 2,016 Blocks, respectively.
+
+      [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals targeting a Definition MUST be 70%, 5% and 2,016 Blocks, respectively.
+
+      [] <Rule> The Active Period required to add, remove, or modify a Goal, Invariant, Rule, or Definition MAY be disregarded if the Proposal is Ratified by 100% of the Votepower.
+        <<This is to allow the initial development of the NRP to be practical, and for future urgent rectifications to not be impossible>>
+
+
+  [] <Goal> Identity within FROGROCKET is non-fungible such that bad actors cannot use anonymity to their advantage.
+
+    [] <Definition> A PARTICIPANT is a person who agrees to abide by the NRP when acting in relation to FROGROCKET, and has been added to the Identity Tree.
+
+    [] <Rule> A Participant SHOULD have exactly one (1) Account.
+
+    [] <Definition> An ACCOUNT is a FROGROCKET Object representing an individual human.
+
+    [] <Rule> An Account MUST encapsulate at least one public key such that the authenticity of messages produced by the owner of the Account can be verified.
+
+    [] <Rule> All action that causes a change to the state of a FROGROCKET Object MUST be signed using a signature scheme currently in use by Bitcoin.
+        <This ensures that there are widely available peer reviewed libraries>
+
+    [] <Rule> An Account SHOULD encapsulate a Permanym.
+
+      [] <Definition> A PERMANYM is the name or psudonym that a Participant wishes to be identified as by other Participants.
+
+      [] <Rule> A Permanym MUST NOT exceed 20 UTF-8 characters in length.
+
+      [] <Rule> The Permanym encapsulated by an Account MUST NOT be modified or removed once set.
+
+      [] <Rule> The Permanym encapsulated by an Account MUST be unique among all Permanyms within FROGROCKET.
+
+      [] <Goal> No two Permanyms are similar enough that a person of average intelligence can mistake one for another.
+        <<Perhaps Levenshtein distance weighted by length>>
+
+
+    [] <Goal> Identity within FROGROCKET exist in an Identity Tree starting from the Ignition Account, such that Sybil attacks can be mitigated very cheaply.
+
+      [] <Definition> The IDENTITY TREE is a tree structure containing all Participants.
+
+      [] <Rule> To be included in the Identity Tree, an Account MUST be validated as a Unique Sovereign Human by a Participant who is already in the Identity Tree.
+
+        [] <Definition> A UNIQUE SOVEREIGN HUMAN ("USH") is an individual human being represented by exactly one FROGROCKET Account.
+
+      [] <Rule> A Participant who has been added to the Identity Tree as a Unique Sovereign Human MAY add new Accounts to the Identity Tree by Approving the Account as a USH.
+
+        [] <Rule> To approve a USH validation request, a Participant SHOULD personally know the person making the validation request, and believe that they do not have any other FROGROCKET accounts and are not currently in the Identity Tree with a different Account.
+
+        [] <Rule> A Participant MAY approve a USH validation request based on adequate proof posted publicly to a reasonable diversity of legacy or centralised social platforms.
+
+        [] <Rule> When approving a USH validation request, a Participant SHOULD NOT make value judgments of the person's character.
+
+        [] <Rule> An account MUST NOT encapsulate a USH validation from more than one (1) other Account.
+
+      [] <Rule> Any Participant MAY Propose to solve a Problem (e.g. automated behaviour or spam) by Excommunicating the offending Participant from FROGROCKET.
+
+        [] <Definition> EXCOMMUNICATION is the permanent banishment of a Participant from FROGROCKET.
+
+        [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals to Excommunicate a Participant MUST be 30%, 0.1% and 12 Blocks, respectively.
+
+        [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals to Excommunicate a Participant who is a Contributor MUST be 70%, 0.1% and 288 Blocks, respectively.
+
+        [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for Proposals to Excommunicate a Participant who is a Shareholder MUST be 50%, 0.1% and 288 Blocks, respectively.
+
+          [] <Rule> A Shareholder who has been Excommunicated MUST wait out the duration of their Account's Lead Time before becoming eligible to transfer their Shares.
+
+          //[] <Rule> A Participant who has been Excommunicated MAY be subject to the forced sale of their Shares to compensate any party to whom they have caused damage, this action MUST follow the FROGROCKET Judicial Protocol.
+
+        [] <Rule> All child Accounts of an Excommunicated Account in the Identity Tree MUST have their USH validation revoked. Child Accounts MAY seek a new USH validation.
+
+    [] <Goal> To provide further resilience to Sybil type attacks by using a scalable graph of trust in addition to the Identity Tree.
+
+      [] <Rule> Any Participant MAY Vouch for the character of other Participants, indicating that they believe the Participant is of good character and intention, and that they are a valuable addition to the community.
+
+      [] <Rule> There MUST NOT be any limitation to the number of Participants that a Participant MAY vouch for.
+
+      [] <Rule> There MUST NOT be any limit to the number of Participants that a Participant MAY be vouched for by.
+
+    [] <Goal> To minimise the potential for malicious actors to acquire Votepower.
+
+      [] <Rule> Shares MUST NOT be transferred to an Account that is not in the Identity Tree.
+
+
+
+  [] <Goal> The efficiency of FROGROCKET Product development does not decrease as the number of Contributors increases. // //
+    <<Amdahl's Law: The More You Need Consensus on what to build, The Less building You Can Do. Do without doing. FROGROCKET has no use for Amazon's two pizza rule because there are no organisational mutexes; this protocol is non-blocking.>>
+
+    [] <Goal> To relieve dependency on individuals by separating different skill sets, such that there is the largest possible pool of competence in any relevant domain.
+
+    [] <Goal> Contributors do not need to wait on any other party before submitting a Patch.
+
+    [] <Goal> Maintainers do not need to wait on any other party before Merging a Patch.
+
+    [] <Goal> Work within FROGROCKET follows a pattern of accurately identifying Problems and applying minimal solutions to these Problems.
+
+      [] <Definition> A PROBLEM is a FROGROCKET Object used to track an observed matter or situation regarded as unsatisfactory.
+
+        [] <Rule> A Problem MUST include a brief summary of the problem not exceeding 140 characters in length.
+
+        [] <Rule> A Problem SHOULD include a description of the problem such that it can be reasoned about, and replicated or observed by others.
+
+        [] <Rule> A Problem MAY include a description of any possible solutions.
+
+        [] <Rule> If a Problem is the child of another problem, this MUST be indicated by including a reference to the parent Problem.
+
+        [] <Rule> If a Problem relates to any Repositories this SHOULD be indicated.
+
+      [] <Goal> Problems are falsifiable, clearly identified, actionable, and valuable to solve.
+
+        [] <Rule> To request changes, a Participant SHOULD create a new Problem and clearly describe the problem they face or have observed.
+
+        [] <Rule> A Participant who creates a new Problem MUST be the Problem's initial Curator.
+
+        [] <Rule> A Curator MAY remove themselves from the position of Curator at any time.
+
+        [] <Rule> If a Curator has not responded to questions about the problem for a period of greater than 144 blocks, a Maintainer MAY remove them as Curator.
+
+        [] <Rule> Any Maintainer MAY assume Curatorship over a problem which has no Curator.
+
+        [] <Rule> The Curator of a Problem MAY close the Problem at any time.
+
+        [] <Rule> When closing a Problem, the Curator SHOULD provide an explanation as to why.
+      <<For posterity, other people might run into the same issue>>
+
+        [] <Rule> The Problem's Curator SHOULD seek consensus on the accuracy of the observation.
+
+        [] <Rule> Participants MAY reply to the Problem to seek further clarification or provide useful information.
+
+        [] <Rule> The Problem's Curator SHOULD refine the Problem summary and description in order to arrive at the most succinct and accurate definition of the problem.
+
+        [] <Rule> Shareholders SHOULD indicate their view on the value of solving this problem by Ranking this problem against others.
+
+      [] <Goal> Participants can solve any Problems that are interesting to them, without any upfront agreement or central authority.
+
+        [] <Rule> Any Participant MAY attempt to solve any Problem that is not currently Claimed.
+
+        [] <Rule> A Participant who wishes to solve a Problem by completing appropriate work SHOULD Claim the Problem to let others know they are working on it.
+
+        [] <Rule> A Participant SHOULD NOT Claim more than one Problem simultaneously.
+
+        [] <Rule> If a Participant who intends to solve a Problem believes the problem is too large or complicated to be solved in less than 6 hours of working time, they SHOULD break the problem down into child Problems and Claim one of those instead.
+
+        [] <Rule> Problems which have child Problems associated with them MUST NOT be Claimed directly but instead be resolved through a process of creating and solving child Problems until the parent Problem is no longer valid.
+
+        [] <Rule> To solve a Problem with a Patch, a Contributor MUST submit a Patch. The Patch MUST be signed by the Contributor and include a reference to the Problem it is solving.
+
+        [] <Rule> To solve a Problem with an update to the NRP, a Shareholder with Votepower greater than zero MUST Propose a modification, addition, or removal of a Goal, Rule, Invariant, Definition, or Protocol.
+
+        [] <Rule> To solve a Problem by removing a bad actor, a Participant MUST Propose Excommunication of the misbehaving Participant.
+
+        [] <Rule> A Participant who Claims a problem SHOULD submit a solution within 144 blocks.
+
+        [] <Rule> If the Participant who claimed a Problem has not communicated for a period of 144 Blocks, any Maintainer SHOULD remove their Claim and free the problem for other Participants to Claim.
+
+      [] <Goal> FROGROCKET Products that have an associated codebase SHOULD have an independent Public Repository.
+
+        [] <Definition> A REPOSITORY consists of a linked-list of Merged Patches (the "Patch Chain").
+
+          [] <Rule> A Repository may be owned by FROGROCKET ("Public Repository"), XOR owned by a Participant ("Dictatorial Repository").
+
+        [] <Definition> A MERGED PATCH is a Patch which has been signed by a Maintainer (Public Repository) or the repository's owner (Dictatorial Repository).
+
+        [] <Definition> The TIP PATCH is the highest Patch in a Repository's Patch Chain.
+
+        [] <Definition> An OFFERED PATCH is a new Patch submitted to a Repository by a Participant.
+
+      [] <Definition> A MAINTAINER is a Contributor who exists in the Maintainer Tree.
+
+        [] <Definition> The MAINTAINER TREE is a hierarchical tree of Maintainers.
+
+        [] <Rule> A Maintainer MAY add any Contributor to the Maintainer Tree.
+
+        [] <Rule> A Maintainer MAY remove any Maintainer who exists below them in the Maintainer Tree.
+
+        [] <Rule> A Maintainer SHOULD remove any Maintainer below them in the Maintainer Tree who demonstrates malicious intent, has been inactive for an uncomfortable period of time, or who's actions indicate that they do not understand the spirit or letter of NRP.
+
+      [] <Rule> A Maintainer SHOULD Merge any Patch to a Public Repository that is congruent with the spirit of the NRP and does not violate the letter of the NRP.
+
+        [] <Rule> A Patch SHOULD be a minimal and accurate answer to exactly one Problem in the Problem Tracker.
+
+        [] <Rule> A Patch SHOULD contain the difference between the Repository's Tip Patch and the proposed solution.
+
+        [] <Rule> A Patch MUST NOT contain any conflicts with the Repository's Tip Patch.
+
+        [] <Rule> A Patch MUST be signed by the Participant who produced it.
+
+        [] <Rule> A Patch MUST adhere to the code style guidelines of the Repository if these are defined.
+           <<e.g. No floating point numbers are allowed in the Engine because it can create consensus issues>>
+
+        [] <Rule> A Patch SHOULD reduce the difficulty in reasoning about the code in any file(s) modified by the Patch.
+
+        [] <Rule> A Patch MUST NOT include non-trivial code from other projects unless the Participant offering the Patch is the original author of that code.
+
+        [] <Rule> A Patch MUST compile cleanly and pass all Repository self-tests.
+
+        [] <Rule> A Patch MUST include adequate documentation for any new Contracts that it introduces.
+
+          [] <Definition> A CONTRACT is a public function or publicly accessible API.
+
+          [] <Rule> A Patch that introduces new Contract(s) SHOULD provide space for extensibility and experimentation behind these Contracts such that the API or function call does not need to be modified in order to accommodate such experimentation.
+
+          [] <Rule> A Patch MUST NOT break any existing usage of Stable contracts.
+
+          [] <Rule> A Patch that introduces new features SHOULD do so using new Contract names.
+         <<a new function or API name>>
+
+          [] <Rule> New Contracts introduced in a Patch SHOULD be marked as “draft” until they are widely used by real users.
+
+          [] <Rule> Contracts that are widely used by real users and/or FROGROCKET Products SHOULD be marked as "stable".
+
+          [] <Rule> Old contracts SHOULD be deprecated in a Patch by marking them as “deprecated”, and replacing them with new Contract names as needed.
+
+          [] <Rule> A Patch MAY remove Contracts that have been deprecated for a period of greater than 25,920 blocks and are not in active use.
+
+          [] <Rule> A Patch MUST NOT reintroduce deprecated or removed Contract names.
+
+      [] <Rule> When a Maintainer Merges an Offered patch, the Patch Height MUST be allocated by incrementing the current Repository's Tip height by 1.
+
+        [] <Definition> The PATCH HEIGHT is the height of a Patch in its Repository's Patch Chain
+
+      [] <Rule> Any Contributor, Shareholder, or Maintainer MAY flag an Offered Patch as potentially malicious such that it draws the attention of other Participants for greater scrutiny.
+
+      [] <Goal> A Patch that has been flagged for greater scrutiny cannot be Merged unless there is consensus among Maintainers that it is safe to do so.
+
+      [] <Rule> Any Maintainer MAY unilaterally Invalidate a Patch Offer to a Public Repository if it does not comply with any part of the NRP.
+
+      [] <Rule> An Invalidated Patch MUST NOT be Merged to a Public Repository.
+
+      [] <Rule> When Invalidating a Patch, the Maintainer SHOULD explain their decision with reference to the NRP, such that any reasonable Participant can understand the problem with the Patch and understand how to correct it.
+
+    [] <Goal> There is space for Participants to publicly experiment with new ideas.
+
+      [] <Rule> Any Participant MAY create a new Dictatorial Repository.
+
+      [] <Definition> A DICTATORIAL REPOSITORY is a Repository under the direct ownership and control of a single Participant.
+
+      [] <Rule> Patches offered to a Dictatorial Repository can only be Merged by the Repository's owner.
+
+      [] <Rule> Maintainers and Shareholders SHOULD NOT engage Problems that are applicable only to a Dictatorial Repository unless the owner has requested their feedback or assistance.
+
+      [] <Rule> The owner of a Dictatorial Repository MUST have complete discretion over who may Claim and Curate Problems applicable solely to their Dictatorial Repository.
+
+      [] <Rule> The owner of a Dictatorial Repository MAY request that ownership of the Repository be transferred to FROGROCKET by creating a Repository Transfer Proposal.
+
+      [] <Rule> The Ratification Rate, Blackball Rate, and Active Period for a Proposal to transfer ownership of a Dictatorial Repository to FROGROCKET MUST be 50%, 1% and 2,016 Blocks, respectively.
+
+      [] <Rule> Expenses citing contributions to a Dictatorial Repository MUST NOT be Approved unless ownership has been transferred to FROGROCKET.
+
+      [] <Rule> If a Patch was Offered while a Repository was a Dictatorial Repository, any Expense citing it is invalid unless the Expense was created prior to creating a Repository Transfer Proposal.
+        <<When voting to approve or reject a Repository Transfer Request, voters must have all relevant information including the expenses for work done on the repository>>
+
+
+
+
+  [] <Goal> The economics of FROGROCKET are sane, sustainable under a universal Bitcoin standard, and congruent with the Grand Manifestation of Existence.
+     <<These all mean the same thing. Financial Backing is the Jagged Rock That Breaks Most Ships.>>
+    [] <Goal> There is an incentive for Participants to become Contributors, and for Contributors to become Shareholders, and thus broaden the diversity of consciousness that has hard power over FROGROCKET.
+    [] <Goal> FROGROCKET is fully insulated from and exists in parallel to the Cantillion Dominion, such that FROGROCKET may engage Dominion systems where it is advantageous to do so, while precluding Fiat Dominion influence over FROGROCKET.
+       <<analogous to a one way valve allowing FROGROCKET to engage and take advantage of Dominion systems but preventing Dominion systems from engaging or taking advantage of FROGROCKET>>
+
+      [] <Definition> The FIAT DOMINION ("Dominion") includes any structures or systems rooted in a monetary supply that produces an observable Cantillon effect.
+         <<e.g. Government, Military, Intelligence, Media, Academic, Financial, Legal, Medical, Think-tank, and "Crypto" systems.>>
+
+    [] <Goal> FROGROCKET improves the lives of all Participants.
+
+    [] <Goal> Participants who decide to become Shareholders are not motivated to do so by an expectation of value derived from a Cantillion effect.
+
+    [] <Goal> FROGROCKET generates revenue for Shareholders by creating Products and Services that solve valuable problems such that there is a market for their use.
+
+    [] <Rule> Any fees charged by FROGROCKET Product(s) MUST be denominated in Satoshi and paid in a form of Bitcoin that can be settled as a UTXO.
+    <<All revenue is divided proportionally among shareholders, this MAY be a FROGROCKET representation but only if there are exceptionally strong guarantees that it can be withdrawn and settled on-chain as a UTXO. Perhaps BIP300, CVTs etc will deliver a nicer way of doing this>>
+
+    [] <Goal> There are no financial honeypots for charismatic personalities to exploit.
+
+      [] <Rule> Shareholders own all revenue generated by FROGROCKET Products.
+
+      [] <Rule> Revenue generated by FROGROCKET MUST be immediately distributed to Shareholders. Revenue MUST NOT be retained by FROGROCKET.
+
+      [] <Rule> FROGROCKET MUST NOT raise any funds.
+
+    [] <Goal> Revenue is distributed to Shareholders in the most fair and honest manner possible.
+
+      [] <Definition> An UNPAID-SHARE is a Share that has not been repaid by a Dividend.
+
+      [] <Definition> A PAID-SHARE is a Share that has been repaid by a Dividend at a rate of 1 Satoshi per Share.
+
+      [] <Definition> A DIVIDEND is revenue paid to a Shareholder, denominated in Satoshi.
+
+      [] <Definition> A REPAYMENT-DIVIDEND is a Dividend that reimburses the Shareholder exactly one (1) Satoshi per Share.
+
+      [] <Rule> The first ever Dividend of exactly one (1) Satoshi received on a Share MUST be a Repayment-Dividend.
+
+      [] <Definition> A PROFIT-DIVIDEND is a Dividend paid to a Shareholder on Shares that have already been repaid by a Repayment-Dividend.
+
+      [] <Definition> A PAYMENT-ADDRESS is a Bitcoin address or BOLT-12 offer specified by a Shareholder to receive Dividends.
+
+      [] <Rule> Every Account with a Share balance greater than zero (0) SHOULD have at least one Payment-Address.
+
+      [] <Definition> The SHARE-AGE of a Share in an Account is the current Bitcoin height minus the height that the Share was credited to the Account.
+
+      [] <Definition> The OLDEST-UNPAID-SHARE is the Share that is currently the most outstanding for a Repayment-Dividend (the Unpaid-Share with the greatest Share-Age).
+
+      [] <Rule> The Oldest-Unpaid-Share MUST be found by taking the set of all Unpaid-Shares within FROGROCKET and selecting the one with the greatest Share-Age.
+
+      [] <Definition> The NEXT-PAYMENT-ADDRESS is the Bitcoin address or BOLT-12 offer provided to the consumer of a FROGROCKET Product or Service, to which the consumer sends Bitcoin.
+
+      [] <Rule> The Next-Payment-Address MUST be taken from the Account containing the Oldest-Unpaid-Share, XOR the Account with the least Profit-Dividends per Paid-Share.
+
+        [] <Rule> If greater than 50% of Shares are Unpaid-Shares, the Next-Payment-Address MUST be taken from the Account the Account containing the Oldest-Unpaid-Share.
+
+        [] <Rule> If greater than 50% of Shares are Paid-Shares, the Next-Payment-Address MUST alternate between the Account with the least Profit-Dividends per Paid-Share and the Account with largest Share-Age of all Unpaid-Shares within FROGROCKET.
+
+    [] <Rule> Any revenue derived from Participants MUST be explicit and voluntary.
+
+      [] <Rule> Revenue MUST NOT be derived by virtue of Participant attention.
+           <<e.g. no selling advertisements that target Participants. Shareholders do not own the community and MUST NOT sell the community to third parties.>>
+
+    [] <Goal> Contributors who consistently solve valuable Problems are protected from burnout.
+
+      [] <Goal> It is trivial for Shareholders to trade their Shares for currency that can be used in their local economy.
+        <<For the crazy ones, the misfits, the rebels, who still gotta pay the rent.>>
+
+        [] <Rule> When an Expense is Approved, the newly created Shares MUST have a Lead Time of zero (0).
+                <<This allows the Contributor to sell the Shares if their Account has Lead Time but they need currency to pay for things>>
+
+    [] <Goal> Contributors who solve a Problem are allocated a Shareholding that accurately reflects the value of the contribution when compared to all other contributions.
+
+      [] <Definition> An EXPENSE is a Proposal for a Contributor to be provided with Shares in compensation for solving a Problem.
+
+      [] <Rule> To receive Shares for solving a Problem, a Contributor MUST create an Expense.
+
+      [] <Rule> An Expense MUST specify the Problem that the Contributor making the expense claim has solved.
+
+      [] <Rule> An Expense MUST NOT be created unless the Curator of the specified Problem has indicated that it is resolved.
+
+      [] <Rule> An Expense MUST NOT reference a Problem that has greater than 0 child Problems.
+
+      [] <Rule> An Expense MUST specify the amount being claimed, denominated in Satoshi.
+
+      [] <Rule> An Expense MUST be Approved if it achieves a Ratification Rate of greater than 70%, and Blackball Rate of less than 10%, after an Active Period greater than 2,016 Blocks.
+
+      [] <Rule> An Expense MUST be Approved if it achieves a Ratification Rate of greater than 30%, and Blackball Rate of less than 5%, after an Active Period greater than 2,016 Blocks.
+
+      [] <Rule> An Expense MUST be Approved if it achieves a Ratification Rate of greater than 50%, and Blackball Rate of no greater than 0% after an Active Period greater than 144 Blocks.
+
+      [] <Rule> An Expense MUST be Approved if it achieves a Ratification Rate of greater than 90% and a Blackball Rate of no greater than 0% after an Active Period greater than 0 Blocks.
+
+      [] <Rule> When an Expense is Approved, the Contributor's Account MUST be credited with a number of Shares equal to the claimed amount denominated in Satoshi.
+
+      [] <Rule> When an Expense is Approved, the total Shares MUST be increased by the amount claimed in Satoshi.
+
+    [] <Invariant> The total supply of Shares MUST equal the total amount of Approved Expenses denominated in Satoshi plus 1.
+         <<There is a single ignition share used to bootstrap the consensus process>>
+
+    [] <Goal> When looking at Expenses with the benefit of hindsight, Approved expenses hit the mark, Invalidated expenses missed it.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the amount being claimed is unreasonable when compared to that of all other Expense claims.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe there is an uncomfortable discrepancy between the amount claimed and the current market value of the work.
+         <<e.g. how does this compare to the rates the Contributor would get on freelancing websites, bounty programs, or any other source?>>
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they do not believe the Problem is worth solving.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the work done is not that of the Participant claiming the expense, to the exclusion of all others.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the solution is incomplete or the Problem is not resolved.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they do not believe the solution is the minimum possible answer to the described Problem.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the Problem referenced by the Expense does not comply with the letter or spirit of the NRP.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the Patch or other solution does not comply with the letter or spirit of the NRP.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the Problem is not documented such that the claim is testable.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the Problem has not been tested appropriately and shown to be a true and accurate observation of reality.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe solving this Problem is not in the critical path to increased revenue, participation, Bitcoin adoption at the bottom of the Cantillion Pyramid, or lulz.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they do not believe the beneficiary of any revenue the solution potentially introduces is the Shareholders to the exclusion of all others.
+         <<Allowing revenue to be used for any purpose other than going straight to the shareholders creates a honeypot>>
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the solution is potentially harmful to Bitcoin or Bitcoin users.
+
+      [] <Rule> Shareholders with Votepower SHOULD vote to Blackball an Expense if they believe the solution is potentially harmful to any Participants, their family, community, or ecological system.
+
+      [] <Rule> Shareholders with Votepower MUST NOT vote to Ratify an Expense if the Problem being solved is a child of another Problem and the Shareholder has not Ratified the entire tree of parent Problems.
+      <<The tree of parent Problems must all be valid. The act of ratifying an expense is an implicit ratification of validity of the problem. This should be made explicit for all parents>>
+
+    [] <Rule> Shares MUST NOT be produced through any means other than by the Approval of an Expense.
+
+
+
+//todo:
+
+  [] <Goal> FROGROCKET has continuity of Critical State that persists through changes to FROGROCKET implementations and the architecture of FROGROCKET systems.
+  <<The current implementation is only intended to kick things off and gather like minded individuals such that they may Participate. There is no reason why w>>
+    [] <Definition> CRITICAL STATE includes Shares, Votepower, Identity and the FROGROCKET Unprotocol.
+    [] <Rule> All Critical State MUST be recoverable by iterating through signed messages produced by Participants.
+    [] <Rule> Any Critical State that is not supported by evidence on the Bitcoin chain MAY be ignored.
+    [] <Rule> There MUST NOT be any Rules or Invariants that prevent FROGROCKET from adopting new mechanisms, architectures or implementations for retaining and updating Critical State.
+    <<I suspect that if the project is a success, implementations that keep track of state and process signed messages from Participants to update State will require a domain specific language that does not yet exist, and may take advantage of Taproot and future upgrades to Bitcoin itself. It could end up being some form of sidechain, merge mined thing, etc, who knows.>>
+
