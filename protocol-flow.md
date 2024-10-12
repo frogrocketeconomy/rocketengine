@@ -70,7 +70,7 @@ The metric we use to judge if frogrocket has optimal boundary conditions on huma
         * The mechanism by which work gets done within frogrocket cannot require upfront agreement on what that work should involve or what the end result should look like
         * frogrocket cannot require any upfront funding and cannot retain any capital
     * To remove any internal friction, frogrocket must be radically fair to all Participants, more fair than any other organisational structure
-        * frogrocket's rules and ideology must be as pristine and *credibly neutral* as possible
+        * frogrocket's rules and ideology must be as pristine and [*credibly neutral*](https://nakamoto.com/credible-neutrality/) as possible
         * It's not possible to be as pristine and neutral as Bitcoin because frogrocket is an organisational structure while Bitcoin is property, but Bitcoin is the standard to judge against.
     * The boundary conditions or limitations should be simple, explicit, clear, and graduated such that there's no overhead required to onboard new Participants, and Participants may advance at their own speed along their own zone of proximal development.
 
